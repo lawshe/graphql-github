@@ -1,5 +1,3 @@
-// import axios from 'axios';
-
 const startingRequest = () => {
   return {
     type: 'STARTING_REQUEST'
