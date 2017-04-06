@@ -4,6 +4,7 @@ var express = require('express');
 var graphqlHTTP = require('express-graphql');
 var graphql = require('graphql');
 var axios = require('axios');
+var path = require('path');
 var GraphQLSchema = graphql.GraphQLSchema;
 var GraphQLObjectType = graphql.GraphQLObjectType;
 var GraphQLString = graphql.GraphQLString;
@@ -59,18 +60,18 @@ console.log('The GraphQL Server is running.')
 
 // configure webpack
 var compiler = webpack({
-  entry: "./index.js",
+  entry: './index.js',
   output: {
     path: __dirname,
-    filename: "bundle.js",
-    publicPath: "/static/"
+    filename: 'bundle.js',
+    publicPath: '/static/'
   },
   module: {
     loaders: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: "babel-loader"
+        loader: 'babel-loader'
       }
     ]
   }
