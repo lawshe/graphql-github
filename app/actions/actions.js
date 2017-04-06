@@ -13,7 +13,7 @@ const finishedRequest = (response) => {
 export const getAccount = (login) => {
   return dispatch => {
     dispatch(startingRequest());
-    let payload =  `{account(login: \"${login}\") {login, avatar_url}}`;
+    let payload =  `{account(login: \"${login}\") {avatar_url, followers, followers_url, html_url, login, public_repos, repos_url, type}}`;
     return new Promise(function(resolve, reject) {
       let request=new XMLHttpRequest();
       request.open('POST', '/graphql', true);

@@ -16,13 +16,37 @@ var accountType = new GraphQLObjectType({
   name: "Account",
   description: "Account information on GitHub",
   fields: {
+    avatar_url: {
+      type: GraphQLString,
+      description: "Image for account"
+    },
+    followers: {
+      type: GraphQLInt,
+      description: "Number of GitHub followers"
+    },
+    followers_url: {
+      type: GraphQLString,
+      description: "Link to view follower data"
+    },
+    html_url: {
+      type: GraphQLString,
+      description: "Link to view account's public repos"
+    },
     login: {
       type: GraphQLString,
       description: "Login for account"
     },
-    avatar_url: {
+    public_repos: {
       type: GraphQLString,
-      description: "Image for account"
+      description: "Link to view public repo data"
+    },
+    repos_url: {
+      type: GraphQLString,
+      description: "Link to user public repos"
+    },
+    type: {
+      type: GraphQLString,
+      description: "Type of account"
     }
   }
 });
