@@ -66,6 +66,9 @@ var compiler = webpack({
     filename: 'bundle.js',
     publicPath: '/static/'
   },
+  resolve: {
+    modules: [path.join(__dirname, 'node_modules')]
+  },
   module: {
     loaders: [
       {
