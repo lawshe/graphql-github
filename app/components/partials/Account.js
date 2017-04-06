@@ -3,7 +3,7 @@ import React from 'react';
 export default (props) => {
   let follwersWord = props.account.followers > 1 ? 'Followers' : 'Follower';
   let followersJsx = props.account.followers > 0 ?
-    <p><a href={ props.account.followers_url } target="_BLANK">{ props.account.followers } { follwersWord }</a></p>
+    <p>{ props.account.followers } { follwersWord }</p>
   : <div></div>;
 
   let locationJsx = props.account.location ?
@@ -12,7 +12,7 @@ export default (props) => {
 
   let reposWord = props.account.public_repos > 1 ? 'Repos' : 'Repo';
   let repoJsx = props.account.public_repos > 0 ?
-    <div><a href={ props.account.repos_url }>{ props.account.public_repos } { reposWord }</a></div>
+    <div>{ props.account.public_repos } { reposWord }</div>
   : <div></div>;
 
 
