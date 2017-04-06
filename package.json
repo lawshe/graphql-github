@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "axios": "^0.16.0",
+    "babel-loader": "^6.4.1",
     "express": "^4.15.2",
     "express-graphql": "^0.6.4",
     "graphbrainz": "^5.1.2",
