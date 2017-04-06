@@ -15,11 +15,18 @@ let Query = React.createClass({
     let fetchInProgress = String(this.props.store.get('fetching'));
     let queryText;
     let account = this.props.store.get('data').toObject();
+
     let loadingJsx = (this.props.store.get('fetching') === true) ?
       <div>
         <Loading />
       </div>
     : <div></div>;
+
+    let resultsJsx = (account && account.login) ?
+      <div>
+        <Account account={account} />
+      </div>
+    : <div className="card-panel grey lighten-4 z-depth-0">No Results</div>;
 
     return (
       <div>
@@ -42,7 +49,7 @@ let Query = React.createClass({
           </form>
         </div>
         {loadingJsx}
-        <Account account={account} />
+        {resultsJsx}
       </div>
     )
   }
