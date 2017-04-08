@@ -6,7 +6,6 @@ import { queryReducer } from "./app/reducers/reducer.js";
 import thunkMiddleware from "redux-thunk";
 import { QueryContainer } from "./app/components/Query.js";
 import analytics from 'universal-ga';
-import configVariables from 'configVariables';
 
 if (configVariables && configVariables.google_analytics){
   analytics.initialize(configVariables.google_analytics.property_id)
