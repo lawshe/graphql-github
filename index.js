@@ -7,9 +7,9 @@ import thunkMiddleware from "redux-thunk";
 import { QueryContainer } from "./app/components/Query.js";
 import analytics from 'universal-ga';
 
-if (configVariables && configVariables.google_analytics){
-  analytics.initialize(configVariables.google_analytics.property_id)
-}
+// if (configVariables && configVariables.google_analytics){
+//   analytics.initialize(configVariables.google_analytics.property_id)
+// }
 
 const createStoreWithMiddleware = applyMiddleware(
   thunkMiddleware
