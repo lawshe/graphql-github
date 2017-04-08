@@ -84,7 +84,7 @@ console.log('The GraphQL Server is running.')
 
 // configure webpack
 var compiler = webpack({
-  entry: './index.js',
+  entry: ['./index.js', './google-analytics.js'],
   output: {
     path: __dirname,
     filename: 'bundle.js',
