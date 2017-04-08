@@ -30,4 +30,5 @@ ReactDOM.render(
 
 if (configVariables && configVariables.google_analytics){
   analytics.initialize(configVariables.google_analytics.property_id)
+  analytics.pageview('/');
 }
