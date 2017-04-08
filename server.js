@@ -91,6 +91,9 @@ var compiler = webpack({
     publicPath: '/static/'
   },
   resolve: {
+    alias: {
+      'config': path.resolve(__dirname, './config')
+    },
     modules: [path.join(__dirname, 'node_modules')]
   },
   module: {
