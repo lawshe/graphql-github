@@ -3,3 +3,5 @@ var config = {
     property_id: ''
   }
 }
+
+module.exports = config;
