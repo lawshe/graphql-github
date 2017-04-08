@@ -5,11 +5,10 @@ import { Provider } from "react-redux";
 import { queryReducer } from "./app/reducers/reducer.js";
 import thunkMiddleware from "redux-thunk";
 import { QueryContainer } from "./app/components/Query.js";
-import config from 'configVariables';
 import analytics from 'universal-ga';
 
-if (config && config.google_analytics){
-  analytics.initialize(config.google_analytics.property_id)
+if (configVariables && configVariables.google_analytics){
+  analytics.initialize(configVariables.google_analytics.property_id)
 }
 
 const createStoreWithMiddleware = applyMiddleware(
