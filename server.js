@@ -91,8 +91,16 @@ var compiler = webpack({
     publicPath: '/static/'
   },
   resolve: {
+    alias: {
+      'configVariables': path.resolve(__dirname, './config')
+    },
     modules: [path.join(__dirname, 'node_modules')]
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      'configVariables': 'configVariables'
+    })
+  ],
   module: {
     loaders: [
       {

@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import { queryReducer } from "./app/reducers/reducer.js";
 import thunkMiddleware from "redux-thunk";
 import { QueryContainer } from "./app/components/Query.js";
-import config from './config';
+import config from 'configVariables';
 import analytics from 'universal-ga';
 
 if (config && config.google_analytics){
