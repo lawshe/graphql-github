@@ -98,7 +98,7 @@ var compiler = webpack({
   },
   plugins: [
     new webpack.ProvidePlugin({
-      'configVariables': 'configVariables'
+      configVariables: 'configVariables'
     })
   ],
   module: {
