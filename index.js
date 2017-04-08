@@ -27,3 +27,7 @@ ReactDOM.render(
   </Provider>,
   document.getElementById("main")
 );
+
+if (configVariables && configVariables.google_analytics){
+  analytics.initialize(configVariables.google_analytics.property_id)
+}
