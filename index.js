@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import { queryReducer } from "./app/reducers/reducer.js";
 import thunkMiddleware from "redux-thunk";
 import { QueryContainer } from "./app/components/Query.js";
+import config from './config';
 
 const createStoreWithMiddleware = applyMiddleware(
   thunkMiddleware
